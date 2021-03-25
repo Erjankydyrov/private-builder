@@ -1,14 +1,17 @@
 .BunsPreview {
     width: 400px;
-    height: 400px;
+    min-height: 400px;
     margin-right: 1rem;
     margin-bottom: 1rem;
     border-radius: 20px;
     background-color: #575550;
+    padding: 10px;
 
     display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
     justify-content: center;
-    align-items: center;
+    overflow: hidden;
 }
 .ingredients {
     width: 380px;

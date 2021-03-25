@@ -5,7 +5,7 @@ import BunsPreview from "./BunsPreview/BunsPreview";
 const BunsBuilder = () => {
     const ingredients = {
         ChocolateBall: 6,
-        StrawberryBall: 2,
+        StrawberryBall:10,
         SharpBall: 8,
     };
     return ( 

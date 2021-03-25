@@ -4,9 +4,9 @@ import DangoPreview from "./DangoPreview/DangoPreview";
 
 const DangoBuilder = () => {
     const ingredients = {
-        ChocolateBall: 1,
+        ChocolateBall: 6,
         StrawberryBall: 2,
-        SharpBall: 1,
+        SharpBall: 8,
     };
     return ( 
         <div className = {classes.DangoBuilder}>

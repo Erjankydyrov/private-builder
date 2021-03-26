@@ -1,12 +1,12 @@
 import BunsIngredient from "../../BunsIngredient/BunsIngredient";
 import classes from "./BunsControl.module.css";
 
-const BunsControl = ({ type }) => {
+const BunsControl = ({ type, addIngredient, removeIngredient }) => {
     return ( 
         <div className = {classes.BunsControl}>
-            <button className = {classes.ControlButton}>-</button>
+            <button className = {classes.ControlButton} onClick = {() => removeIngredient(type)}>-</button>
             <BunsIngredient type = {type} />
-            <button className = {classes.ControlButton}>+</button>
+            <button className = {classes.ControlButton} onClick = {() => addIngredient(type)}>+</button>
         </div>
     );
 }

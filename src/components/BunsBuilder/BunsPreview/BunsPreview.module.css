@@ -1,5 +1,6 @@
 .BunsPreview {
-    width: 400px;
+    width: 100%;
+    max-width: 405px;
     min-height: 400px;
     margin-right: 1rem;
     margin-bottom: 1rem;
@@ -14,8 +15,6 @@
     overflow: hidden;
 }
 .ingredients {
-    width: 380px;
-    height: 380px;
-    border-radius: 100%;
-    position: relative;
+    width: 390px;
+    min-height: 380px;
 }

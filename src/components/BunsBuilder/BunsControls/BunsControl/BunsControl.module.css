@@ -1,15 +1,14 @@
-.ControlGlav {
-    display: flex;
-    justify-content: center;
-}
 .BunsControl {
-    display: inline-block;
-    padding-left: auto;
-    padding-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
 }
-.ControlA {
-
-}
-.ControlB {
-    
+.ControlButton {
+    border-radius: 50%;
+    border: 0px;
+    font-size: 25px;
+    color: #b709ce;
+    width: 30px;
+    height: 30px;
 }

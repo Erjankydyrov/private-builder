@@ -4,9 +4,9 @@ import BunsPreview from "./BunsPreview/BunsPreview";
 
 const BunsBuilder = () => {
     const ingredients = {
-        ChocolateBall: 6,
+        ChocolateBall: 100,
         StrawberryBall:10,
-        SharpBall: 8,
+        SharpBall: 199,
     };
     return ( 
         <div className = {classes.BunsBuilder}>

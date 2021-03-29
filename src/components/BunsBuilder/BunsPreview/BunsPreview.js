@@ -5,9 +5,7 @@ const BunsPreview = ({ ingredients }) => {
     const result =[];
 
     for (const ingredient in ingredients) {
-        for (let i = 0; i < ingredients[ingredient]; i++) {
-            result.push(<BunsIngredient type = {ingredient} />)
-        }
+        result.push(<BunsIngredient key={ingredients[ingredient] + ingredient} type={ingredients[ingredient]} />);
     }
 
     return ( 

@@ -5,34 +5,34 @@ import BunsControls from "./BunsControls/BunsControls";
 import BunsPreview from "./BunsPreview/BunsPreview";
 
 const BunsBuilder = () => {
-  const [ingredients, setIngredients] = useState({
-    Buns: 0,
-    Bread: 0,
-    BlackBun: 0,
-    Croissant: 0,
-    Ecler: 0,
-    EclerVanila: 0,
-  });
+  const [ingredients, setIngredients] = useState([
+    "Buns",
+    "Bread",
+    "BlackBun",
+    "Croissant",
+    "Ecler",
+    "EclerVanila",
+  ]);
 
   function addIngredient(type) {
-    const newIngredients = { ...ingredients };
-    newIngredients[type]++;
+    const newIngredients = [ ...ingredients ];
+    newIngredients.push(type);
     setIngredients(newIngredients);
   }
 
   function removeIngredient(type) {
-    if (ingredients[type]) {
-      const newIngredients = { ...ingredients };
-    newIngredients[type]--;
-    setIngredients(newIngredients);
+    const newIngredients = [ ...ingredients ];
+    const index = newIngredients.lastIndexOf(type);
+    if (index !== -1) {
+      newIngredients.splice(index, 1);
     }
+    setIngredients(newIngredients);
   }
 
   return (
     <div className={classes.BunsBuilder}>
       <BunsPreview ingredients={ingredients} />
       <BunsControls
-        ingredients={ingredients}
         addIngredient={addIngredient}
         removeIngredient={removeIngredient}
       />

@@ -6,12 +6,12 @@ import BunsPreview from "./BunsPreview/BunsPreview";
 
 const BunsBuilder = () => {
   const [ingredients, setIngredients] = useState({
-    Bun1: 0,
-    Bun2: 0,
-    Bun3: 0,
-    Bun4: 0,
-    Bun5: 0,
-    Bun6: 0,
+    Buns: 0,
+    Bread: 0,
+    BlackBun: 0,
+    Croissant: 0,
+    Ecler: 0,
+    EclerVanila: 0,
   });
 
   function addIngredient(type) {

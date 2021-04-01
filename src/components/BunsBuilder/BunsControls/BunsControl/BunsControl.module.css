@@ -11,6 +11,7 @@
     color: #b709ce;
     width: 30px;
     height: 30px;
+    outline: none;
 }
 .ControlButton:hover {
     color: white;

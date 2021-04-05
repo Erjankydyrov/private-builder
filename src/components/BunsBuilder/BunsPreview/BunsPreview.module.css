@@ -19,3 +19,10 @@
     width: 390px;
     min-height: 380px;
 }
+.price {
+    font-size: 1.5rem;
+    color: white;
+    background-color: #b709ce;
+    border-radius: 1rem;
+    padding: 0 1rem;
+} 

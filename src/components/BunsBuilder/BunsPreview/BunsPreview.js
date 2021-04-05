@@ -1,7 +1,7 @@
 import BunsIngredient from "../BunsIngredient/BunsIngredient";
 import classes from "./BunsPreview.module.css";
 
-const BunsPreview = ({ ingredients }) => {
+const BunsPreview = ({ ingredients, price }) => {
     const result =[];
 
     for (const ingredient in ingredients) {
@@ -13,6 +13,7 @@ const BunsPreview = ({ ingredients }) => {
             <div className={classes.ingredients}>
                 {result}
             </div>
+            <div className={classes.price}>{price} som</div>
         </div>
     );
 }

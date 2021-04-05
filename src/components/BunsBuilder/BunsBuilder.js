@@ -14,9 +14,20 @@ const BunsBuilder = () => {
     "EclerVanila",
   ]);
 
+  const [price, setPrice] = useState(150);
+  const prices = {
+    Buns: 5,
+    Bread: 4,
+    BlackBun: .5,
+    Croissant: .5,
+    Ecler: 3,
+    EclerVanila: 2,
+  };
+
   function addIngredient(type) {
     const newIngredients = [ ...ingredients ];
     newIngredients.push(type);
+    setPrice(price + prices[type]);
     setIngredients(newIngredients);
   }
 
@@ -26,12 +37,13 @@ const BunsBuilder = () => {
     if (index !== -1) {
       newIngredients.splice(index, 1);
     }
+    setPrice(price - prices[type]);
     setIngredients(newIngredients);
   }
 
   return (
     <div className={classes.BunsBuilder}>
-      <BunsPreview ingredients={ingredients} />
+      <BunsPreview price={price} ingredients={ingredients} />
       <BunsControls
         addIngredient={addIngredient}
         removeIngredient={removeIngredient}

@@ -1,4 +1,5 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import classes from "./BunsBuilder.module.css";
 import BunsControls from "./BunsControls/BunsControls";
@@ -6,12 +7,6 @@ import BunsPreview from "./BunsPreview/BunsPreview";
 
 const BunsBuilder = () => {
   const [ingredients, setIngredients] = useState([
-    "Buns",
-    "Bread",
-    "BlackBun",
-    "Croissant",
-    "Ecler",
-    "EclerVanila",
   ]);
 
   const [price, setPrice] = useState(150);
@@ -23,6 +18,14 @@ const BunsBuilder = () => {
     Ecler: 3,
     EclerVanila: 2,
   };
+
+  useEffect(() => {
+    axios.get(`https://builder-3fa6d-default-rtdb.firebaseio.com/ingredients.json`)
+        .then((responce) => {
+          const ingredients = responce.data;
+          setIngredients(Object.values(ingredients))
+        })
+  }, [])
 
   function addIngredient(type) {
     const newIngredients = [ ...ingredients ];

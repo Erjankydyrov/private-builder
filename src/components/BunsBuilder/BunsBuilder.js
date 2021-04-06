@@ -16,7 +16,7 @@ const BunsBuilder = () => {
     BlackBun: .5,
     Croissant: .5,
     Ecler: 3,
-    EclerVanila: 2,
+    MiniBuns: 2,
   };
 
   useEffect(() => {

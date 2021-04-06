@@ -9,7 +9,7 @@ const BunsControls = ({ addIngredient, removeIngredient }) => {
     "BlackBun",
     "Croissant",
     "Ecler",
-    "EclerVanila",
+    "MiniBuns",
   ];
   for (const ingredient in ingredients) {
     result.push(

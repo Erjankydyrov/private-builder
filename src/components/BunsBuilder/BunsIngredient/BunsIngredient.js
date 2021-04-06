@@ -5,6 +5,7 @@ import blackBun from "../../../images/blackBun.svg";
 import croissant from "../../../images/croissant.svg";
 import ecler from "../../../images/ecler.svg";
 import eclerVanila from "../../../images/eclerVanila.svg";
+import miniBuns from "../../../images/miniBuns.svg";
 
 const BunsIngredient = ({ type }) => {
   const types = {
@@ -38,6 +39,13 @@ const BunsIngredient = ({ type }) => {
     },
     Ecler: {
       backgroundImage: `url("${ecler}")`,
+      backgroundSize: "Cover",
+      width: "50px",
+      height: "50px",
+      display: "inline-block",
+    },
+    MiniBuns: {
+      backgroundImage: `url("${miniBuns}")`,
       backgroundSize: "Cover",
       width: "50px",
       height: "50px",

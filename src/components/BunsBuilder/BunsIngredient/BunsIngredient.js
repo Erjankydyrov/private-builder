@@ -4,12 +4,21 @@ import bread from "../../../images/bread.svg";
 import blackBun from "../../../images/blackBun.svg";
 import croissant from "../../../images/croissant.svg";
 import ecler from "../../../images/ecler.svg";
-import eclerVanila from "../../../images/eclerVanila.svg";
 import miniBuns from "../../../images/miniBuns.svg";
+import bunsF1 from "../../../images/bunsF1.svg";
+import blackBunF1 from "../../../images/blackBunF1.svg";
+import miniBunsF1 from "../../../images/miniBunsF1.svg";
+import croissantF1 from "../../../images/croissantF1.svg";
+import eclerF1 from "../../../images/eclerF1.svg";
+import bunsF2 from "../../../images/bunsF2.svg";
+import eclerF2 from "../../../images/eclerF2.svg";
+import blackBunF2 from "../../../images/blackBunF2.svg";
+import miniBunsF2 from "../../../images/miniBunsF2.svg";
+import croissantF2 from "../../../images/croissantF2.svg";
 
 const BunsIngredient = ({ type }) => {
   const types = {
-    Buns: {
+    PBuns: {
       backgroundImage: `url("${buns}")`,
       backgroundSize: "Cover",
       width: "50px",
@@ -23,14 +32,14 @@ const BunsIngredient = ({ type }) => {
       height: "50px",
       display: "inline-block",
     },
-    BlackBun: {
+    BBuns: {
       backgroundImage: `url("${blackBun}")`,
       backgroundSize: "Cover",
       width: "50px",
       height: "50px",
       display: "inline-block",
     },
-    Croissant: {
+    Crois: {
       backgroundImage: `url("${croissant}")`,
       backgroundSize: "Cover",
       width: "50px",
@@ -44,20 +53,14 @@ const BunsIngredient = ({ type }) => {
       height: "50px",
       display: "inline-block",
     },
-    MiniBuns: {
+    MBuns: {
       backgroundImage: `url("${miniBuns}")`,
       backgroundSize: "Cover",
       width: "50px",
       height: "50px",
       display: "inline-block",
     },
-    EclerVanila: {
-      backgroundImage: `url("${eclerVanila}")`,
-      backgroundSize: "Cover",
-      width: "50px",
-      height: "50px",
-      display: "inline-block",
-    },
+    
   };
 
   return <div className={classes.BunsIngredient} style={types[type]}></div>;

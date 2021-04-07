@@ -1,27 +1,32 @@
 import BunsControl from "./BunsControl/BunsControl";
 import classes from "./BunsControls.module.css";
+import SwitchBun from "./SwitchBun/SwitchBun";
 
-const BunsControls = ({ addIngredient, removeIngredient }) => {
+const BunsControls = ({ switchFilling, filling, addIngredient, removeIngredient }) => {
   const result = [];
   const ingredients = [
-    "Buns",
+    "PBuns",
     "Bread",
-    "BlackBun",
-    "Croissant",
+    "BBuns",
+    "Crois",
     "Ecler",
-    "MiniBuns",
+    "MBuns",
   ];
   for (const ingredient in ingredients) {
     result.push(
       <BunsControl
-        type={ingredients[ingredient]}
+        type={ingredients[ingredient] + filling}
         key={ingredients[ingredient]}
+        switchFilling={switchFilling}
         addIngredient={addIngredient}
         removeIngredient={removeIngredient}
       />
     );
   }
-  return <div className={classes.BunsControls}>{result}</div>;
+  return <div className={classes.BunsControls}>
+    <SwitchBun switchFilling={switchFilling} />
+    {result}
+    </div>;
 };
 
 export default BunsControls;

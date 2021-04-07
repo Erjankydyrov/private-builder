@@ -1,6 +1,6 @@
 .BunsControls {
-    width: 300px;
-    height: 400px;
+    min-width: 300px;
+    min-height: 400px;
     padding: 1rem;
 
     background-color: #b709ce;

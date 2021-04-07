@@ -1,6 +1,8 @@
+import Button from "../../UI/Button/Button";
 import BunsControl from "./BunsControl/BunsControl";
 import classes from "./BunsControls.module.css";
 import SwitchBun from "./SwitchBun/SwitchBun";
+
 
 const BunsControls = ({ switchFilling, filling, addIngredient, removeIngredient }) => {
   
@@ -20,6 +22,7 @@ const BunsControls = ({ switchFilling, filling, addIngredient, removeIngredient 
         type={ingredients[ingredient] + filling}
         key={ingredients[ingredient]}
         switchFilling={switchFilling}
+        count={ingredients[ingredient]}
         addIngredient={addIngredient}
         removeIngredient={removeIngredient}
       />
@@ -30,7 +33,7 @@ const BunsControls = ({ switchFilling, filling, addIngredient, removeIngredient 
   return <div className={classes.BunsControls}>
     <SwitchBun switchFilling={switchFilling} />
     {result}
-    <button disabled={!ingredients.lenght}>Order</button>
+    <Button disabled={!ingredients.length}>Order</Button>
     </div>;
 };
 

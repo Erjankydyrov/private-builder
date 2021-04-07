@@ -11,13 +11,19 @@ const BunsBuilder = () => {
 
   const [price, setPrice] = useState(150);
   const prices = {
-    Buns: 5,
+    PBuns: 5,
     Bread: 4,
-    BlackBun: .5,
-    Croissant: .5,
+    BBuns: .5,
+    Crois: .5,
     Ecler: 3,
-    MiniBuns: 2,
+    MBuns: 2,
   };
+
+  const [filling, setFilling] = useState("")
+
+  function switchFilling(fillingBun) {
+    setFilling(fillingBun)
+  }
 
   useEffect(() => {
     axios.get(`https://builder-3fa6d-default-rtdb.firebaseio.com/ingredients.json`)
@@ -48,6 +54,8 @@ const BunsBuilder = () => {
     <div className={classes.BunsBuilder}>
       <BunsPreview price={price} ingredients={ingredients} />
       <BunsControls
+        filling={filling}
+        switchFilling={switchFilling}
         addIngredient={addIngredient}
         removeIngredient={removeIngredient}
       />

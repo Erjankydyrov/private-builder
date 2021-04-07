@@ -9,7 +9,7 @@ const BunsBuilder = () => {
   const [ingredients, setIngredients] = useState([
   ]);
 
-  const [price, setPrice] = useState(150);
+  const [price, setPrice] = useState(0);
   const prices = {
     PBuns: 5,
     Bread: 4,
@@ -26,10 +26,10 @@ const BunsBuilder = () => {
   }
 
   useEffect(() => {
-    axios.get(`https://builder-3fa6d-default-rtdb.firebaseio.com/ingredients.json`)
+    axios.get(`https://builder-3fa6d-default-rtdb.firebaseio.com/default.json`)
         .then((responce) => {
-          const ingredients = responce.data;
-          setIngredients(Object.values(ingredients))
+          setPrice(responce.data.price);
+          setIngredients(Object.values(responce.data.ingredients))
         })
   }, [])
 

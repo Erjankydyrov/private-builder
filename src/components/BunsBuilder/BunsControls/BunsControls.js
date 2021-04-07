@@ -3,6 +3,7 @@ import classes from "./BunsControls.module.css";
 import SwitchBun from "./SwitchBun/SwitchBun";
 
 const BunsControls = ({ switchFilling, filling, addIngredient, removeIngredient }) => {
+  
   const result = [];
   const ingredients = [
     "PBuns",
@@ -12,6 +13,7 @@ const BunsControls = ({ switchFilling, filling, addIngredient, removeIngredient 
     "Ecler",
     "MBuns",
   ];
+
   for (const ingredient in ingredients) {
     result.push(
       <BunsControl
@@ -22,10 +24,13 @@ const BunsControls = ({ switchFilling, filling, addIngredient, removeIngredient 
         removeIngredient={removeIngredient}
       />
     );
+
+    
   }
   return <div className={classes.BunsControls}>
     <SwitchBun switchFilling={switchFilling} />
     {result}
+    <button disabled={!ingredients.lenght}>Order</button>
     </div>;
 };
 

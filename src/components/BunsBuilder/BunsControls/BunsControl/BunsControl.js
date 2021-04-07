@@ -1,7 +1,9 @@
 import BunsIngredient from "../../BunsIngredient/BunsIngredient";
+import SwitchBun from "../SwitchBun/SwitchBun";
 import classes from "./BunsControl.module.css";
 
-const BunsControl = ({ type, addIngredient, removeIngredient }) => {
+const BunsControl = ({ switchFilling, type, addIngredient, removeIngredient }) => {
+
     return ( 
         <div className = {classes.BunsControl}>
             <button className = {classes.ControlButton} onClick = {() => removeIngredient(type)}>-</button>

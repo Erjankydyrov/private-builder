@@ -6,11 +6,13 @@ import croissant from "../../../images/croissant.svg";
 import ecler from "../../../images/ecler.svg";
 import miniBuns from "../../../images/miniBuns.svg";
 import bunsF1 from "../../../images/bunsF1.svg";
+import breadF1 from "../../../images/breadF1.svg";
 import blackBunF1 from "../../../images/blackBunF1.svg";
 import miniBunsF1 from "../../../images/miniBunsF1.svg";
 import croissantF1 from "../../../images/croissantF1.svg";
 import eclerF1 from "../../../images/eclerF1.svg";
 import bunsF2 from "../../../images/bunsF2.svg";
+import breadF2 from "../../../images/breadF2.svg";
 import eclerF2 from "../../../images/eclerF2.svg";
 import blackBunF2 from "../../../images/blackBunF2.svg";
 import miniBunsF2 from "../../../images/miniBunsF2.svg";
@@ -67,6 +69,13 @@ const BunsIngredient = ({ type }) => {
       height: "50px",
       display: "inline-block",
     },
+    BreadF1: {
+      backgroundImage: `url("${breadF1}")`,
+      backgroundSize: "Cover",
+      width: "50px",
+      height: "50px",
+      display: "inline-block",
+    },
     MBunsF1: {
       backgroundImage: `url("${miniBunsF1}")`,
       backgroundSize: "Cover",
@@ -97,6 +106,13 @@ const BunsIngredient = ({ type }) => {
     },
     PBunsF2: {
       backgroundImage: `url("${bunsF2}")`,
+      backgroundSize: "Cover",
+      width: "50px",
+      height: "50px",
+      display: "inline-block",
+    },
+    BreadF2: {
+      backgroundImage: `url("${breadF2}")`,
       backgroundSize: "Cover",
       width: "50px",
       height: "50px",

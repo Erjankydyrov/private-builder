@@ -60,7 +60,76 @@ const BunsIngredient = ({ type }) => {
       height: "50px",
       display: "inline-block",
     },
-    
+    PBunsF1: {
+      backgroundImage: `url("${bunsF1}")`,
+      backgroundSize: "Cover",
+      width: "50px",
+      height: "50px",
+      display: "inline-block",
+    },
+    MBunsF1: {
+      backgroundImage: `url("${miniBunsF1}")`,
+      backgroundSize: "Cover",
+      width: "50px",
+      height: "50px",
+      display: "inline-block",
+    },
+    CroisF1: {
+      backgroundImage: `url("${croissantF1}")`,
+      backgroundSize: "Cover",
+      width: "50px",
+      height: "50px",
+      display: "inline-block",
+    },
+    EclerF1: {
+      backgroundImage: `url("${eclerF1}")`,
+      backgroundSize: "Cover",
+      width: "50px",
+      height: "50px",
+      display: "inline-block",
+    },
+    BBunsF1: {
+      backgroundImage: `url("${blackBunF1}")`,
+      backgroundSize: "Cover",
+      width: "50px",
+      height: "50px",
+      display: "inline-block",
+    },
+    PBunsF2: {
+      backgroundImage: `url("${bunsF2}")`,
+      backgroundSize: "Cover",
+      width: "50px",
+      height: "50px",
+      display: "inline-block",
+    },
+    MBunsF2: {
+      backgroundImage: `url("${miniBunsF2}")`,
+      backgroundSize: "Cover",
+      width: "50px",
+      height: "50px",
+      display: "inline-block",
+    },
+    CroisF2: {
+      backgroundImage: `url("${croissantF2}")`,
+      backgroundSize: "Cover",
+      width: "50px",
+      height: "50px",
+      display: "inline-block",
+    },
+    EclerF2: {
+      backgroundImage: `url("${eclerF2}")`,
+      backgroundSize: "Cover",
+      width: "50px",
+      height: "50px",
+      display: "inline-block",
+    },
+    BBunsF2: {
+      backgroundImage: `url("${blackBunF2}")`,
+      backgroundSize: "Cover",
+      width: "50px",
+      height: "50px",
+      display: "inline-block",
+    },
   };
 
   return <div className={classes.BunsIngredient} style={types[type]}></div>;

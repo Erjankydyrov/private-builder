@@ -1,9 +1,18 @@
 import classes from "./Button.module.css";
 
 const Button = (props) => {
-    return ( 
-        <button className={classes.Button} {...props}>{props.children}</button>
-    );
+    
+  const className = [classes.Button];
+  if (props.green) {
+    className.push(classes.green);
+  }
+  if (props.order) {
+    className.push(classes.order);
+  }
+
+  return (
+    <button {...props} className={className.join(' ')}>{props.children}</button>
+  );
 }
- 
+
 export default Button;

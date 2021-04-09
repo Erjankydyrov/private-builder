@@ -38,3 +38,8 @@
 .order:hover {
     background-color: rgb(172, 0, 0);
 }
+.glav {
+    border-radius: 40px;
+    width: 120px;
+    height: 40px;
+}

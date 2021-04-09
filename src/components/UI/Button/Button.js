@@ -9,6 +9,9 @@ const Button = (props) => {
   if (props.order) {
     className.push(classes.order);
   }
+  if (props.glav) {
+    className.push(classes.glav);
+  }
 
   return (
     <button {...props} className={className.join(' ')}>{props.children}</button>

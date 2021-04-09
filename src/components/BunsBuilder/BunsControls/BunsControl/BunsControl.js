@@ -6,9 +6,9 @@ const BunsControl = ({ switchFilling, count, type, addIngredient, removeIngredie
 
     return ( 
         <div className = {classes.BunsControl}>
-            <Button className = {classes.ControlButton} onClick = {() => removeIngredient(type)}>-</Button>
+            <Button className = {classes.ControlButton} onClick = {() => removeIngredient(type)} disabled={!count}>-</Button>
             <BunsIngredient type = {type} />
-            <Button className = {classes.ControlButton} onClick = {() => addIngredient(type)} disabled={!count}>+</Button>
+            <Button className = {classes.ControlButton} onClick = {() => addIngredient(type)}>+</Button>
         </div>
     );
 }

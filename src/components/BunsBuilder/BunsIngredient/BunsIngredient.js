@@ -25,6 +25,7 @@ const BunsIngredient = ({ type }) => {
       backgroundSize: "Cover",
       width: "50px",
       height: "50px",
+      marginRight: "5px",
       display: "inline-block",
     },
     Bread: {
@@ -32,6 +33,7 @@ const BunsIngredient = ({ type }) => {
       backgroundSize: "Cover",
       width: "50px",
       height: "50px",
+      marginRight: "5px",
       display: "inline-block",
     },
     BBuns: {
@@ -39,6 +41,7 @@ const BunsIngredient = ({ type }) => {
       backgroundSize: "Cover",
       width: "50px",
       height: "50px",
+      marginRight: "5px",
       display: "inline-block",
     },
     Crois: {
@@ -46,6 +49,7 @@ const BunsIngredient = ({ type }) => {
       backgroundSize: "Cover",
       width: "50px",
       height: "50px",
+      marginRight: "5px",
       display: "inline-block",
     },
     Ecler: {
@@ -53,6 +57,7 @@ const BunsIngredient = ({ type }) => {
       backgroundSize: "Cover",
       width: "50px",
       height: "50px",
+      marginRight: "5px",
       display: "inline-block",
     },
     MBuns: {
@@ -60,6 +65,7 @@ const BunsIngredient = ({ type }) => {
       backgroundSize: "Cover",
       width: "50px",
       height: "50px",
+      marginRight: "5px",
       display: "inline-block",
     },
     PBunsF1: {
@@ -67,6 +73,7 @@ const BunsIngredient = ({ type }) => {
       backgroundSize: "Cover",
       width: "50px",
       height: "50px",
+      marginRight: "5px",
       display: "inline-block",
     },
     BreadF1: {
@@ -74,6 +81,7 @@ const BunsIngredient = ({ type }) => {
       backgroundSize: "Cover",
       width: "50px",
       height: "50px",
+      marginRight: "5px",
       display: "inline-block",
     },
     MBunsF1: {
@@ -81,6 +89,7 @@ const BunsIngredient = ({ type }) => {
       backgroundSize: "Cover",
       width: "50px",
       height: "50px",
+      marginRight: "5px",
       display: "inline-block",
     },
     CroisF1: {
@@ -88,6 +97,7 @@ const BunsIngredient = ({ type }) => {
       backgroundSize: "Cover",
       width: "50px",
       height: "50px",
+      marginRight: "5px",
       display: "inline-block",
     },
     EclerF1: {
@@ -95,6 +105,7 @@ const BunsIngredient = ({ type }) => {
       backgroundSize: "Cover",
       width: "50px",
       height: "50px",
+      marginRight: "5px",
       display: "inline-block",
     },
     BBunsF1: {
@@ -102,6 +113,7 @@ const BunsIngredient = ({ type }) => {
       backgroundSize: "Cover",
       width: "50px",
       height: "50px",
+      marginRight: "5px",
       display: "inline-block",
     },
     PBunsF2: {
@@ -109,6 +121,7 @@ const BunsIngredient = ({ type }) => {
       backgroundSize: "Cover",
       width: "50px",
       height: "50px",
+      marginRight: "5px",
       display: "inline-block",
     },
     BreadF2: {
@@ -116,6 +129,7 @@ const BunsIngredient = ({ type }) => {
       backgroundSize: "Cover",
       width: "50px",
       height: "50px",
+      marginRight: "5px",
       display: "inline-block",
     },
     MBunsF2: {
@@ -123,6 +137,7 @@ const BunsIngredient = ({ type }) => {
       backgroundSize: "Cover",
       width: "50px",
       height: "50px",
+      marginRight: "5px",
       display: "inline-block",
     },
     CroisF2: {
@@ -130,6 +145,7 @@ const BunsIngredient = ({ type }) => {
       backgroundSize: "Cover",
       width: "50px",
       height: "50px",
+      marginRight: "5px",
       display: "inline-block",
     },
     EclerF2: {
@@ -137,6 +153,7 @@ const BunsIngredient = ({ type }) => {
       backgroundSize: "Cover",
       width: "50px",
       height: "50px",
+      marginRight: "5px",
       display: "inline-block",
     },
     BBunsF2: {
@@ -144,6 +161,7 @@ const BunsIngredient = ({ type }) => {
       backgroundSize: "Cover",
       width: "50px",
       height: "50px",
+      marginRight: "5px",
       display: "inline-block",
     },
   };

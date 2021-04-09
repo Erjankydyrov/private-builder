@@ -1,6 +1,5 @@
 import classes from "./Modal.module.css";
 import Backdrop from "../Backdrop/Backdrop";
-import Button from "../Button/Button";
 
 const Modal = ({ show, children, cancel }) => {
   const style = {
@@ -12,10 +11,6 @@ const Modal = ({ show, children, cancel }) => {
       <Backdrop show={show} click={cancel} />
       <div className={classes.content} style={style}>
         {children}
-        <div className={classes.CaseButtons}>
-          <Button onClick={cancel} green="true">Checkout</Button>
-          <Button onClick={cancel} order="true">Cancel</Button>
-        </div>
       </div>
     </div>
   );

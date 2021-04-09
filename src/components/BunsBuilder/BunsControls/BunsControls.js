@@ -30,9 +30,11 @@ const BunsControls = ({
     <div className={classes.BunsControls}>
       <SwitchBun switchFilling={switchFilling} />
       {result}
-      <Button disabled={!ingredients.length} onClick={startOrdering}>
-        Order
-      </Button>
+      <div className={classes.DivButton}>
+        <Button disabled={!ingredients.length} onClick={startOrdering} glav="true">
+          Order
+        </Button>
+      </div>
     </div>
   );
 };

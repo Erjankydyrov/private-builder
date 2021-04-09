@@ -17,8 +17,24 @@
 }
 
 .green {
-    background-color: rgb(137, 255, 133);
+    border-radius: 30px;
+    width: 100px;
+    height: 50px;
+    outline: none;
+    border: 0px;
+    background-color: rgb(104, 243, 99);
 }
-.green:not(:disabled):hover {
+.green:hover {
     background-color: rgb(49, 172, 0);
+}
+.order{
+    border-radius: 30px;
+    width: 100px;
+    height: 50px;
+    outline: none;
+    border: 0px;
+    background-color: rgb(250, 75, 75);
+}
+.order:hover {
+    background-color: rgb(172, 0, 0);
 }

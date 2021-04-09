@@ -7,8 +7,8 @@ import BunsControls from "./BunsControls/BunsControls";
 import BunsPreview from "./BunsPreview/BunsPreview";
 
 const BunsBuilder = () => {
-  const [ingredients, setIngredients] = useState([
-  ]);
+
+  const [ingredients, setIngredients] = useState([]);
 
   const [price, setPrice] = useState(0);
   const prices = {
@@ -33,11 +33,19 @@ const BunsBuilder = () => {
   };
 
   const [filling, setFilling] = useState("")
-
   function switchFilling(fillingBun) {
     setFilling(fillingBun)
   }
 
+  
+  const [ordering, setOrdering] = useState(false);
+  function startOrdering() {
+    setOrdering(true);
+  }
+  function stopOrdering() {
+    setOrdering(false);
+  }
+  
   useEffect(() => {
     axios.get(`https://builder-3fa6d-default-rtdb.firebaseio.com/default.json`)
         .then((responce) => {
@@ -65,15 +73,18 @@ const BunsBuilder = () => {
 
   return (
     <div className={classes.BunsBuilder}>
-      <BunsPreview price={price} ingredients={ingredients} />
+      <BunsPreview price={price} ingredients={ingredients} startOrdering={startOrdering}/>
       <BunsControls
         filling={filling}
         ingredients={ingredients}
         switchFilling={switchFilling}
         addIngredient={addIngredient}
         removeIngredient={removeIngredient}
+        startOrdering = {startOrdering}
       />
-      
+      <Modal
+        show={ordering}
+        cancel={stopOrdering}>Hello</Modal>
     </div>
   );
 };

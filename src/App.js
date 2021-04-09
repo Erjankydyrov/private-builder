@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <Layout>
-        <h1>Buns-builder by Erjan Kydyrov</h1>
+        <h1>Sweet bakery</h1>
         <BunsBuilder />
       </Layout>
     </div>

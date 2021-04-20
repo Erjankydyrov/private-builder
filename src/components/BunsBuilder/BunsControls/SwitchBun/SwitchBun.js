@@ -12,7 +12,7 @@ const SwitchBun = ({ switchFilling }) => {
         type="radio"
         id="none"
         name="fil"
-        chacked = "checked"
+        checked
         onChange = {()=>switchFilling("")}/>
 
     const inpF2 = <input

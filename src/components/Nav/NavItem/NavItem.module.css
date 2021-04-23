@@ -3,10 +3,13 @@
     text-decoration: none;
     display: block;
     padding: 10px 15px;
+    border-radius: 15px;
+    margin-left: 10px;
     transition: background-color .5s ease-out;
 }
 .NavItem a:hover {
     border-color: white;
+    border-radius: 15px;
     background-color: #ffc240;
 }
 .NavItem a:active,

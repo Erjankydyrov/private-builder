@@ -9,7 +9,6 @@
 }
 .NavItem a:hover {
     border-color: white;
-    border-radius: 15px;
     background-color: #ffc240;
 }
 .NavItem a:active,
@@ -19,7 +18,9 @@
 
 @media (max-width: 549px) {
     .NavItem a {
-      border-right: 10px solid transparent;
-      border-bottom: none;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-right: 10px solid transparent;
+        border-bottom: none;
     }
 } 

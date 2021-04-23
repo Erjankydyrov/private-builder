@@ -5,12 +5,15 @@ import Modal from "../UI/Modal/Modal";
 import classes from "./BunsBuilder.module.css";
 import BunsControls from "./BunsControls/BunsControls";
 import BunsPreview from "./BunsPreview/BunsPreview";
+import OrderSummary from "./OrderSummary/OrderSummary";
+import Button from "../UI/Button/Button";
 
 const BunsBuilder = () => {
 
-  const [ingredients, setIngredients] = useState([]);
+  const [ingredients, setIngredients] = useState({
+  });
 
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState(150);
   const prices = {
     PBuns: 5,
     Bread: 5,
@@ -36,7 +39,6 @@ const BunsBuilder = () => {
   function switchFilling(fillingBun) {
     setFilling(fillingBun)
   }
-
   
   const [ordering, setOrdering] = useState(false);
   function startOrdering() {
@@ -45,27 +47,39 @@ const BunsBuilder = () => {
   function stopOrdering() {
     setOrdering(false);
   }
-  
+
+  function finishOrdering() {
+    axios.post(`https://builder-3fa6d-default-rtdb.firebaseio.com/orders.json`, {
+          ingredients: ingredients,
+          price: price,
+          address: "1234 Jusaeva str",
+          phone: "0 777 777 777",
+          name: "Sadyr Japarov",
+        })
+        .then(() => {
+          setOrdering(false);
+        })
+  }
+
   useEffect(() => {
     axios.get(`https://builder-3fa6d-default-rtdb.firebaseio.com/default.json`)
         .then((responce) => {
           setPrice(responce.data.price);
-          setIngredients(Object.values(responce.data.ingredients))
+          setIngredients(responce.data.ingredients)
         })
   }, [])
 
   function addIngredient(type) {
-    const newIngredients = [ ...ingredients ];
-    newIngredients.push(type);
+    const newIngredients = { ...ingredients };
+    newIngredients[type]++;
     setPrice(price + prices[type]);
     setIngredients(newIngredients);
   }
 
   function removeIngredient(type) {
-    const index = ingredients.lastIndexOf(type);
-    if (index !== -1) {
-      const newIngredients = [ ...ingredients ];
-      newIngredients.splice(index, 1);
+    if (ingredients[type]) {
+      const newIngredients = { ...ingredients };
+      newIngredients[type]--;
       setPrice(price - prices[type]);
       setIngredients(newIngredients);
     }
@@ -84,7 +98,15 @@ const BunsBuilder = () => {
       />
       <Modal
         show={ordering}
-        cancel={stopOrdering}>Hello</Modal>
+        cancel={stopOrdering}>
+          <OrderSummary
+            ingredients={ingredients}
+            price={price}/>
+            <div className={classes.CaseButtons}>
+              <Button onClick={finishOrdering} green="true">Checkout</Button>
+              <Button onClick={stopOrdering} order="true">Cancel</Button>
+            </div>
+        </Modal>
     </div>
   );
 };

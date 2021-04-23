@@ -2,11 +2,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 10px;
 
     font-size: 26px;
     color: white;
-    background-color: #b709ce;
+    background-color: #008bee;
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
 
     position: sticky;

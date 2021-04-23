@@ -16,7 +16,7 @@ const BunsControls = ({
 
   for (const ingredient in ingredients) {
     total += ingredients[ingredient];
-    console.log(ingredient)
+    console.log(Object.keys(ingredients));
     result.push(
       <BunsControl
         type={ingredient + filling}

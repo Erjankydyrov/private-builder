@@ -11,16 +11,18 @@ const BunsControls = ({
   ingredients,
   removeIngredient,
 }) => {
+
   const result = [];
   let total = 0;
 
   for (const ingredient in ingredients) {
     total += ingredients[ingredient];
-    console.log(Object.keys(ingredients));
+
     result.push(
       <BunsControl
-        type={ingredient + filling}
+        type={ingredient}
         key={ingredient}
+        filling={filling}
         switchFilling={switchFilling}
         count={ingredients[ingredient]}
         addIngredient={addIngredient}

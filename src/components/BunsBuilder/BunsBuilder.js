@@ -12,7 +12,6 @@ const BunsBuilder = () => {
 
   const [ingredients, setIngredients] = useState({
   });
-
   const [price, setPrice] = useState(150);
   const prices = {
     PBuns: 5,

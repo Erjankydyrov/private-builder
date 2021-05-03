@@ -1,9 +1,9 @@
 import classes from "./CheckoutForm.module.css";
 import Button from "../../UI/Button/Button"
 
-const CheckoutForm = () => {
+const CheckoutForm = ({ cancelCallback, submitCallback }) => {
   return (
-    <form className={classes.CheckoutForm}>
+    <form className={classes.CheckoutForm} onSubmit={submitCallback}>
       <div>
         <label htmlFor="name">Name</label>
         <input type="text" name="name" id="name" required  />
@@ -18,7 +18,7 @@ const CheckoutForm = () => {
       </div>
       <div className={classes.Buttons}>
         <Button green="true">Checkout</Button>
-        <Button order="true">Cancel</Button>
+        <Button order="true" onClick={cancelCallback}>Cancel</Button>
       </div>
     </form>
   );

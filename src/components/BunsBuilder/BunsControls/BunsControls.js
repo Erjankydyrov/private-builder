@@ -7,9 +7,7 @@ const BunsControls = ({
   switchFilling,
   startOrdering,
   filling,
-  addIngredient,
   ingredients,
-  removeIngredient,
 }) => {
 
   const result = [];
@@ -25,8 +23,6 @@ const BunsControls = ({
         filling={filling}
         switchFilling={switchFilling}
         count={ingredients[ingredient]}
-        addIngredient={addIngredient}
-        removeIngredient={removeIngredient}
       />
     );
   }

@@ -2,8 +2,12 @@ import BunsPreview from "../BunsBuilder/BunsPreview/BunsPreview";
 import classes from "./Checkout.module.css";
 import CheckoutForm from "./ChecoutForm/CheckoutForm";
 import axios from "axios";
+import { useSelector } from "react-redux";
 
 const Checkout = ({ history }) => {
+
+    const ingredients = useSelector(state => state.ingredients);
+    const price = useSelector(state => state.price);
     
     function cancelCallback() {
         history.replace('/');
@@ -16,15 +20,8 @@ const Checkout = ({ history }) => {
           name: data.get('name'),
           address: data.get('address'),
           phone: data.get('phone'),
-          ingredients: {
-            PBuns: 10,
-            Bread: 10,
-            BBuns: 10,
-            Crois: 10,
-            Ecler: 10,
-            MBuns: 10,
-          },
-          price: 100,
+          ingredients: ingredients,
+          price: price,
         }).then(response => {
           history.replace('/');
         });
@@ -34,14 +31,7 @@ const Checkout = ({ history }) => {
 
     return ( 
         <div className={classes.Checkout}>
-            <BunsPreview ingredients={{
-                PBuns: 1,
-                Bread: 1,
-                BBuns: 1,
-                Crois: 1,
-                Ecler: 1,
-                MBuns: 1,
-            }} price={150} />
+            <BunsPreview ingredients={ingredients} price={price} />
             <CheckoutForm
                 cancelCallback={cancelCallback}
                 submitCallback={submitCallback} />

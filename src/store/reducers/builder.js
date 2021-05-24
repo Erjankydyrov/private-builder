@@ -43,7 +43,6 @@ const builder = (state = initialState, action) => {
       break;
     case SET_INGREDIENTS:
       return { ...action.data };
-      break;
 
     default:
       break;

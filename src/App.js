@@ -39,7 +39,6 @@ function App() {
   return (
     <div className="App">
       <Layout>
-        <h1>Sweet bakery</h1>
         { routesOutput}
       </Layout>
     </div>

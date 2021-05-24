@@ -1,28 +1,31 @@
 import classes from "./OrderSummary.module.css";
 
-const OrderSummary = ({ ingredients, price}) => {
+const OrderSummary = ({ ingredients, price, key }) => {
   const labels = {
-    PBuns: "Cake",
-    Bread: "Roll",
-    BBuns: "Black cake",
+    PBuns: "Pretzel",
+    Bread: "Cake",
+    BBuns: "Waffle with ice cream",
     Crois: "Croissant",
-    Ecler: "Ecler",
-    MBuns: "Mini cakes",
-    PBunsF1: "Vanilla cake",
-    BreadF1: "Chocolate roll",
-    BBunsF1: "Chocolate cake",
-    CroisF1: "Vanilla croissant",
-    EclerF1: "Vanilla ecler",
-    MBunsF1: "Vanilla mini cakes",
-    PBunsF2: "Glazed cake",
-    BreadF2: "Glazed roll",
-    BBunsF2: "Strawberry cake",
-    CroisF2: "Chocolate croissant",
-    EclerF2: "Strawberry ecler",
-    MBunsF2: "Glazed mini cakes",
+    Ecler: "Jelly cookies",
+    MBuns: "Waffle",
+    PBunsChocolate: "Chocolate pretzel",
+    BreadChocolate: "Chocolate cake",
+    BBunsChocolate: "Waffle with сhocolate ice cream",
+    CroisChocolate: "Vanilla croissant",
+    EclerChocolate: "Jelly cookies with сhocolate",
+    MBunsChocolate: "Chocolate waffle",
+    PBunsVanilla: "Vanilla pretzel",
+    BreadVanilla: "Vanilla cake",
+    BBunsVanilla: "Waffle with vanilla ice cream",
+    CroisVanilla: "Chocolate croissant",
+    EclerVanilla: "Jelly cookies with vanilla",
+    MBunsVanilla: "Vanilla waffle",
   };
-  const results = Object.keys(ingredients)
-    .map(type => <li>{labels[type]}: {ingredients[type]}</li>);
+  const results = Object.keys(ingredients).map((type, id) => (
+    <li key={id}>
+      {labels[type]}: {ingredients[type]}
+    </li>
+  ));
 
   return (
     <div className={classes.OrderSummary}>

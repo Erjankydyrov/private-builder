@@ -37,7 +37,7 @@ const BunsBuilder = ({ history }) => {
     setOrdering(false);
   }
 
-  useEffect(() => dispatch(load()), []);
+  useEffect(() => dispatch(load()), [dispatch]);
 
   function finishOrdering() {
     setOrdering(false);

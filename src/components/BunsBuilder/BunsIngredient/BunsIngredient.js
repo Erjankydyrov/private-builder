@@ -168,20 +168,23 @@ const BunsIngredient = ({ type, fixed }) => {
   };
 
   function getPosition(ingredientWidth) {
-    const pizzaDiameter = 320;
 
-    const ingredientTop = Math.round(Math.random() * pizzaDiameter);
-    const ingredientLeft = Math.round(Math.random() * pizzaDiameter);
+    const trayDiameter = 380;
+    const trayRadius = trayDiameter / 2;
+    const ingredientRadius = parseInt(ingredientWidth) / 2;
+
+    const ingredientTop = Math.round(Math.random() * trayDiameter);
+    const ingredientLeft = Math.round(Math.random() * trayDiameter);
 
     const distance = Math.sqrt(
-      Math.pow(ingredientTop, 2) + Math.pow(ingredientLeft, 2)
-    );
+      Math.pow(ingredientTop - trayRadius, 2) + Math.pow(ingredientLeft - trayRadius, 2)
+    ) + ingredientRadius;
 
-    return distance
+    return distance < trayRadius
       ? {
-          top: ingredientTop,
-          left: ingredientLeft,
-        }
+        top: ingredientTop - ingredientRadius,
+        left: ingredientLeft - ingredientRadius
+      }
       : getPosition(ingredientWidth);
   }
 

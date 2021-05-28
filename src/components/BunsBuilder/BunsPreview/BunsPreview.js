@@ -1,5 +1,6 @@
 import BunsIngredient from "../BunsIngredient/BunsIngredient";
 import classes from "./BunsPreview.module.css";
+import tray from "../../../images/tray.svg"
 
 const BunsPreview = ({ ingredients, price }) => {
   const result = [];
@@ -12,7 +13,9 @@ const BunsPreview = ({ ingredients, price }) => {
   return (
     <div className={classes.BunsPreview}>
       <div className={classes.bun}>
-        <div className={classes.ingredients}>{result}</div>
+        <div className={classes.ingredients} style={
+          { backgroundImage: `url(${tray})`, backgroundSize: `cover` }
+        }>{result}</div>
       </div>
       <div className={classes.price}>{price.toFixed(1)} som</div>
     </div>

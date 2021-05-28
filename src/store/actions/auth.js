@@ -30,7 +30,7 @@ export const restore = (dispatch) => {
   if (idToken && localId) {
     const expirationDate = new Date(localStorage.getItem("expirationDate"));
     if (expirationDate > new Date()) {
-      success(dispatch, { idToken, localId });
+      dispatch(success({ idToken, localId }));
       timeout(dispatch, (expirationDate.getTime() - new Date().getTime()) / 1000);
     }
     else {

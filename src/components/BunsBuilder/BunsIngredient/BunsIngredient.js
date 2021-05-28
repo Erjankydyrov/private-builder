@@ -169,7 +169,7 @@ const BunsIngredient = ({ type, fixed }) => {
 
   function getPosition(ingredientWidth) {
 
-    const trayDiameter = 380;
+    const trayDiameter = 400;
     const trayRadius = trayDiameter / 2;
     const ingredientRadius = parseInt(ingredientWidth) / 2;
 

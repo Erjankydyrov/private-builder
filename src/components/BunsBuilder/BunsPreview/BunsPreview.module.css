@@ -1,6 +1,6 @@
 .BunsPreview {
     width: 100%;
-    max-width: 420px;
+    max-width: 430px;
     min-height: 400px;
     margin-right: 3rem;
     margin-bottom: 1rem;
@@ -17,8 +17,8 @@
 }
 .ingredients {
     text-align: center;
-    width: 390px;
-    min-height: 390px;
+    width: 425px;
+    min-height: 420px;
     position: relative;
 }
 .price {

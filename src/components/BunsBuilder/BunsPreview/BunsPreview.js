@@ -14,7 +14,7 @@ const BunsPreview = ({ ingredients, price }) => {
     <div className={classes.BunsPreview}>
       <div className={classes.bun}>
         <div className={classes.ingredients} style={
-          { backgroundImage: `url(${tray})`, backgroundSize: `cover`, backgroundPosition: `center` }
+          { backgroundImage: `url(${tray})`, backgroundSize: `cover`, backgroundPosition: `center`, zIndex:"-1" }
         }>{result}</div>
       </div>
       <div className={classes.price}>{price.toFixed(1)} som</div>
